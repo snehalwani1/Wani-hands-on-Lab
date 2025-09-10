@@ -1,9 +1,12 @@
 fileVersion: 1
-id: "3"
+id: "7"
 mappingDefinitions:
   SRC:
-    database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCH_SF1
+    database: WANI
+    schema: SRC
+  TARGET:
+    database: WANI
+    schema: TARGET
   WORK:
     database: WANI
     schema: WORKPROD

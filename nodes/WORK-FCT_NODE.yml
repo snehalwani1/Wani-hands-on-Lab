@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 679dedb3-782e-47ab-860d-669574e9ecfa
+name: FCT_NODE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: WORK
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad2e0f67-e84e-4fa1-a381-4708b25b3414
+          stepCounter: 679dedb3-782e-47ab-860d-669574e9ecfa
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 382a8293-2b56-4ee8-abcc-be664df3fb21
+          stepCounter: 679dedb3-782e-47ab-860d-669574e9ecfa
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FCT_NODE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

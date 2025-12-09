@@ -1,0 +1,34 @@
+fileVersion: 1
+id: 1a5d001b-5d50-420d-bd4d-b8abb04fe08d
+name: V_NODE
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns: []
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: V_NODE
+        noLinkRefs: []
+  name: V_NODE
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

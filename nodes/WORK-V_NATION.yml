@@ -1,0 +1,103 @@
+fileVersion: 1
+id: 099aa765-e928-4139-ab01-fbb7c6d46e3f
+name: V_NATION
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: Nation data as defined by TPC-H
+  isMultisource: false
+  locationName: WORK
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d755e8d7-2b83-4d7e-8d4a-f4da502e80be
+          stepCounter: 099aa765-e928-4139-ab01-fbb7c6d46e3f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a299f97c-bf17-45af-8357-a792a7460a3f
+                stepCounter: c0e0961d-e6af-4bec-a1ad-d44b880bbc8b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5405c871-b569-40a2-b22f-d39b92fb9345
+          stepCounter: 099aa765-e928-4139-ab01-fbb7c6d46e3f
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ab70fe6-498a-40fe-9d86-a9463adee3db
+                stepCounter: c0e0961d-e6af-4bec-a1ad-d44b880bbc8b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a789928-a1ec-49d3-9313-67d321b030a9
+          stepCounter: 099aa765-e928-4139-ab01-fbb7c6d46e3f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 39351245-03db-4237-87c0-8a018ecbeae5
+                stepCounter: c0e0961d-e6af-4bec-a1ad-d44b880bbc8b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36b3a680-ee32-4d3a-86ee-6dd86513ed9c
+          stepCounter: 099aa765-e928-4139-ab01-fbb7c6d46e3f
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 950e6e8e-fa57-4264-a8d0-2d38660f4903
+                stepCounter: c0e0961d-e6af-4bec-a1ad-d44b880bbc8b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          NATION: c0e0961d-e6af-4bec-a1ad-d44b880bbc8b
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('WORK', 'V_NATION')}} AS (
+            		SELECT 
+            		-----------
+             "N_NATIONKEY" AS "N_NATIONKEY",
+             "N_NAME" AS "N_NAME",
+             "N_REGIONKEY" AS "N_REGIONKEY",
+             "N_COMMENT" AS "N_COMMENT"
+             FROM {{ ref('SRC', 'NATION') }}
+            	)
+        dependencies:
+          - locationName: SRC
+            nodeName: NATION
+        join:
+          joinCondition: FROM {{ ref('SRC', 'NATION') }} "NATION"
+        name: V_NATION
+        noLinkRefs: []
+  name: V_NATION
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

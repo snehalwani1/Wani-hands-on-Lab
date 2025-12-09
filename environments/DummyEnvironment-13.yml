@@ -1,14 +1,14 @@
 fileVersion: 1
-id: "7"
+id: "13"
 mappingDefinitions:
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
   TARGET:
-    database: WANI
-    schema: TARGET
+    database: SNEHAL_DB
+    schema: INFORMATION_SCHEMA
   WORK:
-    database: WANI
-    schema: WORKPROD
-name: Production Environment
+    database: SNEHAL_DB
+    schema: PUBLIC
+name: Dummy Environment
 type: Environment

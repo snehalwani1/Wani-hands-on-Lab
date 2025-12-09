@@ -1,0 +1,70 @@
+fileVersion: 1
+id: 4faf9810-cfdf-4baf-adbf-1a58213ffa24
+name: FCT_NODE1
+operation:
+  config:
+    postSQL: ""
+    preSQL: |
+      CALL Snehal_DB.PUBLIC.SAMPLE_();
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f347135c-29c1-447f-b976-8a51853eefa2
+          stepCounter: 4faf9810-cfdf-4baf-adbf-1a58213ffa24
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13775727-9633-4807-a386-94e65425e624
+          stepCounter: 4faf9810-cfdf-4baf-adbf-1a58213ffa24
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: FCT_NODE1
+        noLinkRefs: []
+  name: FCT_NODE1
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

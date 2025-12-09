@@ -22,6 +22,7 @@ operation:
         config: {}
         dataType: NUMBER
         description: ""
+        isBusinessKey: true
         name: DIM_CUSTOMER_KEY
         nullable: true
         sourceColumnReferences:
@@ -36,6 +37,7 @@ operation:
         config: {}
         dataType: NUMBER
         description: ""
+        isBusinessKey: true
         name: DIM_PART_KEY
         nullable: true
         sourceColumnReferences:
@@ -78,6 +80,7 @@ operation:
         config: {}
         dataType: DATE
         description: ""
+        isBusinessKey: true
         name: LINEITEM_COMMITDATE
         nullable: false
         sourceColumnReferences:
